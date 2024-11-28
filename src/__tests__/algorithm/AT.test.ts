@@ -27,9 +27,8 @@ describe("validateTIN", () => {
   });
 
   // Test case for TIN that doesn't follow Austria-specific rule
-  it.only("should return 1 for a TIN that does not follow the Austria-specific rule", () => {
+  it("should return 1 for a TIN that does not follow the Austria-specific rule", () => {
     const invalidRuleTIN = "987654321"; // This should fail the Austria rule
-    const invalidRuleTIN = "999999988"; // This should fail the Austria rule
     expect(validateTIN(invalidRuleTIN)).toBe(1);
   });
 });
