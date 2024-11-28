@@ -1,7 +1,7 @@
-import { clearString } from '../utils/StringUtils';
-import { validate as validateDate } from '../utils/DateUtils';
+import { clearString, isFollowLength, isFollowPattern } from '../utils/StringUtils';
+import { validateDate } from '../utils/DateUtils';
 
-const LENGTH = "11";
+const LENGTH = 11;
 const PATTERN = "\\d{2}[0-1]\\d[0-3]\\d{6}";
 
 let resultDateValidation: number;
@@ -9,11 +9,11 @@ let resultDateValidation: number;
 const validate = (tin: string): number => {
   const str = clearString(tin);
   
-  if (!isFollowLength(str)) {
+  if (!isFollowLength(str, LENGTH)) {
     return 4;
   } else {
     setResultDateValidation(isValidDate(str));
-    if (isFollowPattern(str) && resultDateValidation !== 0) {
+    if (isFollowPattern(str, PATTERN) && resultDateValidation !== 0) {
       return !isFollowRules(str) ? 1 : 0;
     } else {
       return 3;
@@ -35,15 +35,6 @@ const isFollowBelgiumRule1AndIsDateValid = (tin: string): boolean => {
 
 const isFollowBelgiumRule2AndIsDateValid = (tin: string): boolean => {
   return isFollowBelgiumRule2(tin) && resultDateValidation >= 2;
-};
-
-const isFollowLength = (tin: string): boolean => {
-  return tin.length === 11;
-};
-
-const isFollowPattern = (tin: string): boolean => {
-  const pattern = new RegExp(PATTERN);
-  return pattern.test(tin);
 };
 
 const isFollowBelgiumRule1 = (tin: string): boolean => {

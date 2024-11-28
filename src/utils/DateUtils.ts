@@ -10,7 +10,7 @@ const getLastDayOfMonth = (month: number, year: number): number => {
 	return month === 2 && isLeapYear(year) ? 29 : lastDayOfMonth[month]
 }
 
-export const validate = (year: number, month: number, day: number): boolean => {
+export const validateDate = (year: number, month: number, day: number): boolean => {
 	if (month >= JANUARY && month <= DECEMBER) {
 		return day >= 1 && day <= getLastDayOfMonth(month, year)
 	}

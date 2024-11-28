@@ -1,16 +1,17 @@
 import { NegativeNumberException } from '../utils/Exceptions';
 import { sumDigit, getUnit } from '../utils/NumberUtils';
-import { clearString } from '../utils/StringUtils';
+import { clearString, isFollowLength, isFollowPattern } from '../utils/StringUtils';
 
 // Constants
 const PATTERN = "\\d{9}";
+const LENGTH = 9;
 
 // Validate function
 export const validateTIN = (tin: string): number => {
   const normalizedTIN = clearString(tin);
-  if (!isFollowLength(normalizedTIN)) {
+  if (!isFollowLength(normalizedTIN, LENGTH)) {
     return 4;
-  } else if (!isFollowPattern(normalizedTIN)) {
+  } else if (!isFollowPattern(normalizedTIN, PATTERN)) {
     return 3;
   } else {
     return !isFollowRules(normalizedTIN) ? 1 : 0;
@@ -20,17 +21,6 @@ export const validateTIN = (tin: string): number => {
 // Rule validation function
 const isFollowRules = (tin: string): boolean => {
   return tin.length === 9 && isFollowAustriaRule(tin);
-};
-
-// Length validation function
-const isFollowLength = (tin: string): boolean => {
-  return tin.length === 9;
-};
-
-// Pattern validation function
-const isFollowPattern = (tin: string): boolean => {
-  const regex = new RegExp(PATTERN);
-  return regex.test(tin);
 };
 
 // Austria-specific rule validation
@@ -52,9 +42,6 @@ const isFollowAustriaRule = (tin: string): boolean => {
       sumDigit(c4 * 2) +
       sumDigit(c6 * 2) +
       sumDigit(c8 * 2);
-
-      console.log("sum: ", sum);
-      console.log("sumDigit(c2 * 2): ", sumDigit(c2 * 2))
 
     const check = getUnit(100 - sum);
 
