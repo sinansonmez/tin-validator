@@ -1,9 +1,4 @@
-class NegativeNumberException extends Error {
-  constructor(message: string) {
-    super(message);
-    this.name = "NegativeNumberException";
-  }
-}
+import { NegativeNumberException } from '../utils/Exceptions';
 
 const sumDigit = (number: number): number => {
   if (number < 0) {
@@ -71,6 +66,5 @@ export {
   getNextTens,
   getUnit,
   isInRange,
-  getMinValue,
-  NegativeNumberException,
+  getMinValue
 };

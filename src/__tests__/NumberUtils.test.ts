@@ -3,9 +3,10 @@ import {
   getNextTens,
   getUnit,
   isInRange,
-  getMinValue,
-  NegativeNumberException,
+  getMinValue
 } from "../utils/NumberUtils";
+
+import { NegativeNumberException } from "../utils/Exceptions";
 
 describe("sumDigit", () => {
   test("returns the sum of digits for a positive number", () => {
