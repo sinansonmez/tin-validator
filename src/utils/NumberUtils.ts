@@ -1,6 +1,8 @@
 import { NegativeNumberException } from '../utils/Exceptions';
 
 const sumDigit = (number: number): number => {
+  console.log("number: ", number);
+  
   if (number < 0) {
     throw new NegativeNumberException("Parameter has to be positive.");
   }

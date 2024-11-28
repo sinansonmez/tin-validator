@@ -4,9 +4,9 @@ import {
   getUnit,
   isInRange,
   getMinValue
-} from "../utils/NumberUtils";
+} from "../../utils/NumberUtils";
 
-import { NegativeNumberException } from "../utils/Exceptions";
+import { NegativeNumberException } from "../../utils/Exceptions";
 
 describe("sumDigit", () => {
   test("returns the sum of digits for a positive number", () => {

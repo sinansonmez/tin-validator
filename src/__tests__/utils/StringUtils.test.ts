@@ -1,4 +1,4 @@
-import { clearString, isFollowLength, isFollowPattern, digitAt, removesCharacterAtPos, fillWith0UntilLength } from '../utils/StringUtils';
+import { clearString, isFollowLength, isFollowPattern, digitAt, removesCharacterAtPos, fillWith0UntilLength } from '../../utils/StringUtils';
 
 describe('clearString', () => {
 	test('removes non-alphanumeric characters', () => {

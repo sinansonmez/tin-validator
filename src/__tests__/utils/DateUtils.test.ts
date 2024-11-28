@@ -1,4 +1,4 @@
-import { validate } from '../utils/DateUtils'
+import { validate } from '../../utils/DateUtils'
 
 describe('validate', () => {
 	test('validates correct date in a non-leap year', () => {
