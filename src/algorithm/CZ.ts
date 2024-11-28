@@ -16,7 +16,7 @@ export const validate = (tin: string): number => {
   }
 }
 
-function isFollowYearRuleAlgo1(tin: string): boolean {
+const isFollowYearRuleAlgo1 = (tin: string): boolean => {
   try {
     const year = parseInt(tin.substring(0, 2));
     return year >= 0 && year < 54;
@@ -25,24 +25,24 @@ function isFollowYearRuleAlgo1(tin: string): boolean {
   }
 }
 
-function isFollowPatterns(tin: string): boolean {
+const isFollowPatterns = (tin: string): boolean => {
   return (isFollowPattern1AndLength1(tin) && isFollowYearRuleAndValidDate(tin)) ||
          (isFollowPattern2AndLength2(tin) && isValidDate(tin));
 }
 
-function isFollowPattern1AndLength1(tin: string): boolean {
+const isFollowPattern1AndLength1 = (tin: string): boolean => {
   return isFollowPattern(tin, PATTERN_1) && isFollowLength(tin, LENGTH_1);
 }
 
-function isFollowPattern2AndLength2(tin: string): boolean {
+const isFollowPattern2AndLength2 = (tin: string): boolean => {
   return isFollowPattern2(tin) && isFollowLength(tin, LENGTH_2);
 }
 
-function isFollowYearRuleAndValidDate(tin: string): boolean {
+const isFollowYearRuleAndValidDate = (tin: string): boolean => {
   return isFollowYearRuleAlgo1(tin) && isValidDate(tin);
 }
 
-function isFollowPattern2(tin: string): boolean {
+const isFollowPattern2 = (tin: string): boolean => {
   try {
     const yearOfSample = parseInt(tin.substring(0, 2));
     const currentYear = new Date().getFullYear() % 100;
@@ -57,7 +57,7 @@ function isFollowPattern2(tin: string): boolean {
   }
 }
 
-function isValidDate(tin: string): boolean {
+const isValidDate = (tin: string): boolean => {
   try {
     const year = parseInt(tin.substring(0, 2));
     const month = parseInt(tin.substring(2, 4));

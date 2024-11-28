@@ -2,11 +2,9 @@ import { NegativeNumberException } from '../utils/Exceptions';
 import { sumDigit, getUnit } from '../utils/NumberUtils';
 import { clearString, isFollowLength, isFollowPattern } from '../utils/StringUtils';
 
-// Constants
 const PATTERN = "\\d{9}";
 const LENGTH = 9;
 
-// Validate function
 export const validateTIN = (tin: string): number => {
   const normalizedTIN = clearString(tin);
   if (!isFollowLength(normalizedTIN, LENGTH)) {

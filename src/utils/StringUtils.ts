@@ -1,3 +1,4 @@
+// todo check for any unused utility functions
 const clearString = (str: string): string => {
 	return str.replace(/[^a-zA-Z0-9]/g, '')
 }
@@ -36,7 +37,6 @@ const fillWith0UntilLength = (tin: string, length: number): string => {
 	return normalizedTIN
 }
 
-// Exporting the functions if needed
 export {
 	clearString,
 	isFollowLength,
