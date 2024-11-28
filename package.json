@@ -1,0 +1,40 @@
+{
+    "name": "eu-tin-validator",
+    "version": "0.0.1",
+    "description": "A simple library to validate european union countries tax identification numbers",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "scripts": {
+      "test": "jest --config jestconfig.json",
+      "build": "tsc",
+      "format": "prettier --write \"src/**/*.ts\"",
+      "lint": "tslint -p tsconfig.json",
+      "prepare": "npm run build",
+      "prepublishOnly": "npm test && npm run lint",
+      "preversion": "npm run lint",
+      "version": "npm run format && git add -A src",
+      "postversion": "git push && git push --tags"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/sinansonmez/eu-tin-validator.git"
+    },
+    "keywords": [
+      "tin",
+      "tax",
+      "identification",
+      "validator"
+    ],
+    "author": "Sinan Sonmez (Chaush)",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/sinansonmez/eu-tin-validator/issues"
+    },
+    "homepage": "https://github.com/sinansonmez/eu-tin-validator#readme",
+    "devDependencies": {
+      "@types/jest": "^29.5.14",
+      "jest": "^29.7.0",
+      "ts-jest": "^29.2.5",
+      "typescript": "^5.7.2"
+    }
+  }
