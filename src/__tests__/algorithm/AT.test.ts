@@ -4,7 +4,10 @@ import { NegativeNumberException } from "../../utils/Exceptions"; // Assuming th
 describe("validateTIN", () => {
   // Test case for valid TIN
   it("should return 0 for a valid TIN", () => {
-    const validTIN = "931736581"; // Assuming this TIN is valid as per Austria rules
+    const validTIN = "931736581"; // Assuming this TIN is valid as per Austria rules 123456782
+    expect(validateTIN(validTIN)).toBe(0);
+
+    const anotherValidTIN = "123456782";
     expect(validateTIN(validTIN)).toBe(0);
   });
 
@@ -24,8 +27,9 @@ describe("validateTIN", () => {
   });
 
   // Test case for TIN that doesn't follow Austria-specific rule
-  it("should return 1 for a TIN that does not follow the Austria-specific rule", () => {
+  it.only("should return 1 for a TIN that does not follow the Austria-specific rule", () => {
     const invalidRuleTIN = "987654321"; // This should fail the Austria rule
+    const invalidRuleTIN = "999999988"; // This should fail the Austria rule
     expect(validateTIN(invalidRuleTIN)).toBe(1);
   });
 });

@@ -53,6 +53,9 @@ const isFollowAustriaRule = (tin: string): boolean => {
       sumDigit(c6 * 2) +
       sumDigit(c8 * 2);
 
+      console.log("sum: ", sum);
+      console.log("sumDigit(c2 * 2): ", sumDigit(c2 * 2))
+
     const check = getUnit(100 - sum);
 
     return c9 === check;
