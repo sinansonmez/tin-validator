@@ -6,7 +6,7 @@ const LENGTH = 9;
 const PATTERN_1 = "\\d{8}[a-zA-Z]";
 const PATTERN_2 = "[XYZKLMxyzklm]\\d{7}[a-zA-Z]";
 
-export const validate = (tin: string): number => {
+export const validateES = (tin: string): number => {
 	let normalizedTIN = fillWith0(tin)
 	if (!isFollowLength(normalizedTIN, LENGTH)) {
 		return 4

@@ -3,7 +3,7 @@ import { isFollowLength } from "../utils/StringUtils";
 const LENGTH = 11;
 const PATTERN_1 = "[1-9]\\d{10}";
 
-export const validate = (tin: string): number => {
+export const validateDE = (tin: string): number => {
   const normalizedTIN = tin.replace("/", "");
   if (!isFollowLength(normalizedTIN, LENGTH)) {
     return 4;

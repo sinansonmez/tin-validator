@@ -7,7 +7,7 @@ const LENGTH_2 = 11
 const PATTERN_2 = "[3][2]\\d{9}"
 
 // todo this should be the structure for all validate functions
-export const validate = (tin: string): number => {
+export const validateLV = (tin: string): number => {
 	if (!isFollowLengthForLV(tin)) {
 		return 4
 	} else if (!isFollowPatternForLV(tin)) {

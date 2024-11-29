@@ -6,7 +6,7 @@ const LENGTH_2 = 8;
 const PATTERN_2 = "\\d{7}[a-wA-W]";
 
 // Validate TIN function
-export const validate = (tin: string): number => {
+export const validateIE = (tin: string): number => {
   if (!isFollowLength(tin, LENGTH_1) && !isFollowLength(tin, LENGTH_2)) {
     return 4; // Length mismatch
   } else if ((!isFollowLength(tin, LENGTH_1) || isFollowPattern(tin, PATTERN_1)) && (!isFollowLength(tin, LENGTH_2) || isFollowPattern(tin, PATTERN_2))) {

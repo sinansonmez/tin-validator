@@ -3,7 +3,7 @@ import { clearString, digitAt, isFollowLength, isFollowPattern } from "../utils/
 const PATTERN = "\\d{11}";
 const LENGTH = 11;
 
-export const validate = (tin: string): number => {
+export const validateHR = (tin: string): number => {
     const str = clearString(tin);
   
     if (!isFollowLength(str, LENGTH)) {

@@ -80,7 +80,7 @@ const isFollowRules = (tin: string): boolean =>
 	isFollowLuxembourgRule1(tin) && isFollowLuxembourgRule2(tin)
 
 // todo align logic 78 always (!isFollowPattern(tin, PATTERN) || !isValidDate(tin)) return 3. everywhere
-export const validate = (tin: string): number => {
+export const validateLU = (tin: string): number => {
 	if (!isFollowLength(tin, LENGTH)) {
 		return 4
 	} else if (isFollowPattern(tin, PATTERN) && isValidDate(tin)) {

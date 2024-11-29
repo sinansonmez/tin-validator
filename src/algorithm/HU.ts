@@ -3,7 +3,7 @@ import { isFollowLength, isFollowPattern } from "../utils/StringUtils";
 const LENGTH = 10;
 const PATTERN = "8\\d{9}";
 
-export const validate = (tin: string): number => {
+export const validateHU = (tin: string): number => {
   if (!isFollowLength(tin, LENGTH)) {
     return 4; // Length mismatch
   } else if (!isFollowPattern(tin, PATTERN)) {

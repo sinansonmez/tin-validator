@@ -6,7 +6,7 @@ const PATTERN_1 = "[0-5]\\d[0156]\\d[0-3]\\d{4}";
 const LENGTH_2 = 10;
 const PATTERN_2 = "\\d{2}[01235678]\\d[0-3]\\d{5}";
 
-export const validate = (tin: string): number => {
+export const validateCZ = (tin: string): number => {
   const normalizedTIN = tin.replace('/', '');
   
   if (!isFollowLength(normalizedTIN, LENGTH_1) && !isFollowLength(normalizedTIN, LENGTH_2)) {

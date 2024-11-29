@@ -82,7 +82,7 @@ const isFollowLength2AndPattern2 = (tin: string): boolean => {
 	return isFollowLength(tin, LENGTH_2) && isFollowPattern2(tin)
 }
 
-export const validate = (tin: string): number => {
+export const validateMT = (tin: string): number => {
 	let normalizedTIN = ""
 	try {
 		normalizedTIN = fillWith0UntilLength(tin, LENGTH_1)

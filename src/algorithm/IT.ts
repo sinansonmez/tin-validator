@@ -5,7 +5,7 @@ import italianId from "../utils/it_id.json";
 const LENGTH = 16;
 const PATTERN = '[a-zA-Z]{6}[LMNPQRSTUVlmnpqrstuv0-9]{2}[ABCDEHLMPRSTabcdehlmprst]([0Ll][1-9]|[1Mm2Nn4Qq5Rr6Ss][0-9]|[3Pp7Tt][0-1])[a-zA-Z][LMNPQRSTUVlmnpqrstuv0-9]{3}[a-zA-Z]';
 
-export const validate = (tin: string): number => {
+export const validateIT = (tin: string): number => {
   if (!isFollowLength(tin, LENGTH)) {
     return 4;
   } else if (isFollowPatternForIt(tin) && isValidDate(tin)) {

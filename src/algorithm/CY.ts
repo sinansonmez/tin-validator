@@ -3,7 +3,7 @@ import { isFollowLength, isFollowPattern } from "../utils/StringUtils";
 const LENGTH = 9;
 const PATTERN = "[0,9]\\d{7}[A-Z]";
 
-export const validate = (tin: string): number => {
+export const validateCY = (tin: string): number => {
   if (!isFollowLength(tin, LENGTH)) {
     return 4;
   } else if (!isFollowPattern(tin, PATTERN)) {

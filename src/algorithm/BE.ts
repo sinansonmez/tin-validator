@@ -6,7 +6,7 @@ const PATTERN = "\\d{2}[0-1]\\d[0-3]\\d{6}";
 
 let resultDateValidation: number;
 
-const validate = (tin: string): number => {
+export const validateBE = (tin: string): number => {
   const str = clearString(tin);
   
   if (!isFollowLength(str, LENGTH)) {
@@ -66,5 +66,3 @@ const isValidDate = (tin: string): number => {
     return 0;
   }
 };
-
-export { validate };

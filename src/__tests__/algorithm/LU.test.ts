@@ -1,6 +1,6 @@
-import { validate } from "../../algorithm/LU";
+import { validateLU } from "../../algorithm/LU";
 
-describe("LUAlgorithm validate", () => {
+describe("LUAlgorithm validateLU", () => {
   const invalidLengthTINs = [
     "200001015678",
     "20000101567890",
@@ -14,23 +14,23 @@ describe("LUAlgorithm validate", () => {
     // Add more invalid pattern TINs here if needed
   ];
 
-  test("validates valid TINs", () => {
-    expect(validate("1893120105732")).toBe(0);
+  test("validateLUs valid TINs", () => {
+    expect(validateLU("1893120105732")).toBe(0);
   });
 
   test("returns 4 for TINs with invalid length", () => {
     invalidLengthTINs.forEach((tin) => {
-      expect(validate(tin)).toBe(4);
+      expect(validateLU(tin)).toBe(4);
     });
   });
 
   test("returns 3 for TINs with invalid pattern or date", () => {
     invalidPatternTINs.forEach((tin) => {
-      expect(validate(tin)).toBe(3);
+      expect(validateLU(tin)).toBe(3);
     });
   });
 
   test("returns 1 for TINs that do not follow rules", () => {
-    expect(validate("2000010156781")).toBe(1);
+    expect(validateLU("2000010156781")).toBe(1);
   });
 });

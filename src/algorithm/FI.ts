@@ -4,7 +4,7 @@ import { validateDate } from "../utils/DateUtils"
 const LENGTH = 11;
 const PATTERN = /^[0-3]\d[0-1]\d{3}[+-A]\d{3}[0-9A-Z]$/
 
-export const validateTIN = (tin: string): number => {
+export const validateFI = (tin: string): number => {
 	if (!isFollowLength(tin, LENGTH)) {
 		return 4
 	} else if (isFollowPattern(tin, PATTERN) && isValidDate(tin)) {

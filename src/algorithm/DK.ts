@@ -4,7 +4,7 @@ import { validateDate } from "../utils/DateUtils";
 const LENGTH = 10;
 const PATTERN = /^[0-3]\d[0-1]\d{3}\d{4}$/;
 
-export const validate = (tin: string): number => {
+export const validateDK = (tin: string): number => {
   const withoutHyphen = tin.replace("-", "");
   if (!isFollowLength(withoutHyphen, LENGTH)) {
     return 4;

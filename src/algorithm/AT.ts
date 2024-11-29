@@ -5,7 +5,7 @@ import { clearString, isFollowLength, isFollowPattern } from '../utils/StringUti
 const PATTERN = "\\d{9}";
 const LENGTH = 9;
 
-export const validateTIN = (tin: string): number => {
+export const validateAT = (tin: string): number => {
   const normalizedTIN = clearString(tin);
   if (!isFollowLength(normalizedTIN, LENGTH)) {
     return 4;
