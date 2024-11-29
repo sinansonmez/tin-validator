@@ -8,7 +8,7 @@ const isFollowLength = (str: string, length: number): boolean => {
 	return regex.test(str)
 }
 
-const isFollowPattern = (str: string, pattern: string): boolean => {
+const isFollowPattern = (str: string, pattern: string | RegExp): boolean => {
 	const regex = new RegExp(pattern)
 	return regex.test(str)
 }
