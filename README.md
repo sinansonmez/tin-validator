@@ -16,7 +16,9 @@ npm install eu-tin-validator
 `npm run test`
 
 ## limitage
-- Czech Republic: Syntax is not publicly available so it only check if length and pattern matches. You will never get 0 as the response
+For the following countries, syntax rules are not publicly available so it only check if length and pattern matches. You will never get 0 as the response
+- **Czech Republic**
+- **Greece**
 
 ## disclaimer
 Important disclaimer:
