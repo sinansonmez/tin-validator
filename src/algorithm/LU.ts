@@ -55,7 +55,6 @@ const isFollowLuxembourgRule1 = (tin: string): boolean => {
 		sumDigit(digits[6] * 2) +
 		sumDigit(digits[8] * 2) +
 		sumDigit(digits[10] * 2)
-	console.log("check 1: ", sum % 10 === 0)
 	return sum % 10 === 0
 }
 

@@ -37,15 +37,10 @@ const isFollowLVRule = (tin: string): boolean => {
 	const c9 = parseInt(tin.charAt(8))
 	const c10 = parseInt(tin.charAt(9))
 	const checkDigit = parseInt(tin.charAt(10), 36)
-    console.log("checkDigit: ", checkDigit)
 	const sum = c1 * 1 + c2 * 6 + c3 * 3 + c4 * 7 + c5 * 9 + c6 * 10 + c7 * 5 + c8 * 8 + c9 * 4 + c10 * 2
-    console.log("sum: ", sum)
 	const remainderBy11 = sum % 11
-    console.log("remainderBy11: ", remainderBy11)
-    console.log("if: ", 1 - remainderBy11 < -1);
     
 	const result = 1 - remainderBy11 < -1 ? checkDigit === 1 - remainderBy11 + 11 : checkDigit === 1 - remainderBy11
-    console.log("result: ", result)
     return result;
 }
 
