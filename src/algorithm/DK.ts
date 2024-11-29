@@ -60,6 +60,7 @@ const isFollowDenmarkRule = (tin: string): boolean => {
   }
 };
 
+// todo: centralize in Date utils same in EE
 const isValidDate = (tin: string): boolean => {
   try {
     const day = parseInt(tin.substring(0, 2), 10);
