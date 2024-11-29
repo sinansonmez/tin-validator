@@ -15,10 +15,8 @@ export const validate = (tin: string): number => {
 
 const isFollowRules = (tin: string): boolean => {
   let number = parseInt(tin.substring(0, 10), 10);
-  console.log("number: ", number);
   
   let remainderBy511 = number % 511;
-  console.log("remainderBy511: ", remainderBy511)
   let checkDigits = 0;
   if (remainderBy511 < 100) {
     checkDigits =
@@ -28,6 +26,5 @@ const isFollowRules = (tin: string): boolean => {
   } else {
     checkDigits = parseInt(tin.substring(10, 13));
   }
-  console.log("check digits: ", checkDigits)
   return remainderBy511 === checkDigits;
 };
