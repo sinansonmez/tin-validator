@@ -16,7 +16,7 @@ describe("ITAlgorithm", () => {
       const validTin = "DMLPRY77D15H501F";
       const validTin1 = "DOEJCK80T12H501J";
       expect(validateIT(validTin)).toBe(0);
-      expect(validateIT(validTin)).toBe(0);
+      expect(validateIT(validTin1)).toBe(0);
     });
 
     it("should return 1 if the TIN does not follow rules", () => {
