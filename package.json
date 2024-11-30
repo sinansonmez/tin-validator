@@ -1,8 +1,8 @@
 {
     "name": "tin-validators",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "A simple library to validate european union countries tax identification numbers",
-    "main": "src/index.ts",
+    "main": "lib/index.js",
     "types": "lib/types/index.d.ts",
     "scripts": {
       "test": "jest --config jestconfig.json",
