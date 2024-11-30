@@ -46,7 +46,7 @@ const validate = (tin: string, country: Country) => {
     
       const validator = validators[country];
       if (validator) {
-        validator(tin);
+        return validator(tin);
       }
 }
 
