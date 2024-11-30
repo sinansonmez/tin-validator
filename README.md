@@ -1,5 +1,6 @@
 # tin-validators
 Tax Identification Number (TIN) Validator for European Union (EU) Countries
+Source: https://ec.europa.eu/taxation_customs/tin/#/check-tin
 
 ### Supported Countries
 - Austria (AT)
@@ -23,13 +24,11 @@ Tax Identification Number (TIN) Validator for European Union (EU) Countries
 - Malta (MT)
 - Spain (ES)
 
-## limitage
+## limitations
 For the following countries, syntax rules are not publicly available so it only check if length and pattern matches. You will never get 0 as the response
 - **Czech Republic**
 - **Greece**
 - **Malta**
-
-Source: https://ec.europa.eu/taxation_customs/tin/#/check-tin
 
 ## install
 
