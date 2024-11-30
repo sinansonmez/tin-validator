@@ -1,4 +1,4 @@
-import { Country } from "utils/constants";
+import { Country } from "./utils/constants";
 import { validateAT } from "./algorithm/AT";
 import { validateBE } from "./algorithm/BE";
 import { validateBG } from "./algorithm/BG";
