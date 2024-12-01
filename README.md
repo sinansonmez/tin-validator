@@ -40,9 +40,9 @@ npm install tin-validators
 
 ## usage
 ```typescript
-import * as TinValidator from 'tin-validators';
+import {validate, Country} from 'tin-validators';
 
-const result = TinValidator.validate("DOEJCK80T12H501J", TinValidator.country.IT)
+const result = validate("DOEJCK80T12H501J", Country.IT)
 ```
 Responses: 
 - VALID = 0;
