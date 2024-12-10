@@ -1,7 +1,7 @@
 {
     "name": "tin-validators",
-    "version": "0.0.6",
-    "description": "A simple library to validate european union countries tax identification numbers",
+    "version": "0.0.7",
+    "description": "Comprehensive Tax Identification Number (TIN) Validator for all European Union (EU) countries. This tool checks the syntax and structure of TINs to ensure compliance with EU standards. Perfect for developers integrating accurate TIN validation into web applications. Includes support for TypeScript, npm installation, and detailed validation codes for seamless integration. Enhances data accuracy and reliability in applications requiring TIN verification.",
     "main": "lib/index.js",
     "types": "lib/types/index.d.ts",
     "scripts": {
@@ -17,10 +17,17 @@
       "url": "git+https://github.com/sinansonmez/tin-validator.git"
     },
     "keywords": [
-      "tin",
-      "tax",
-      "identification",
-      "validator"
+      "TIN Validator",
+      "Tax Identification Number",
+      "EU TIN",
+      "European Union",
+      "Syntax Validation",
+      "Structure Validation",
+      "TypeScript",
+      "npm package",
+      "Web Development",
+      "Data Validation",
+      "Compliance"
     ],
     "author": "Sinan Sonmez (Chaush)",
     "license": "MIT",
